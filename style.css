@@ -123,6 +123,7 @@ li span {
   }
 
   video {
+    object-fit: cover;
     margin-top: -1px;
   }
 
