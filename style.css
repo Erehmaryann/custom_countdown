@@ -134,6 +134,7 @@ li span {
 
   .container {
     min-width: unset;
+    width: 95vw;
     min-height: 245px;
     padding: 20px;
     margin: 10px;
