@@ -109,6 +109,7 @@ ul {
 }
 
 li {
+  display: inline-block;
   font-size: 30px;
   list-style-type: none;
   padding: 10px;
