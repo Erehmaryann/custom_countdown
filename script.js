@@ -6,4 +6,4 @@ const dateEl = document.querySelector("#date-picker");
 
 // Set date Input Minimum with Today's Date
 const today = new Date().toISOString().split("T")[0];
-console.log(today);
+dateEl.setAttribute("min", today);
