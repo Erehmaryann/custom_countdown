@@ -134,6 +134,7 @@ li span {
 
 @keyframes complete {
   0% {
+    color: rgb(233, 13, 13);
   }
 
   25% {
