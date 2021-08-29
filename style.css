@@ -132,6 +132,23 @@ li span {
   animation: complete 4s infinite;
 }
 
+@keyframes complete {
+  0% {
+  }
+
+  25% {
+  }
+
+  50% {
+  }
+
+  75% {
+  }
+
+  100% {
+  }
+}
+
 /* Media Query: Large Smartphone (Vertical) */
 @media screen and (max-width: 600px) {
   .video-background {
