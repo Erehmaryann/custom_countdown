@@ -3,3 +3,6 @@
 const inputContainer = document.querySelector("#input-container");
 const countdownForm = document.querySelector("#countdownForm");
 const dateEl = document.querySelector("#date-picker");
+
+// Set date Input Minimum with Today's Date
+const today = new Date().toISOString();
