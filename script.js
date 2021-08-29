@@ -8,7 +8,11 @@ const dateEl = document.querySelector("#date-picker");
 const today = new Date().toISOString().split("T")[0];
 dateEl.setAttribute("min", today);
 
-const updateCountdown = () => {};
+// Take Values from Form Input
+const updateCountdown = (e) => {
+  e.preventDefault();
+  console.log(e);
+};
 
 // Event listeners
 countdownForm.addEventListener("submit", updateCountdown);
