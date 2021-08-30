@@ -47,21 +47,22 @@ const updateDOM = () => {
 
     // If the countdown is over, show Complete
     if (distance < 0) {
+      countdownEl.hidden = true;
       clearInterval(countdownActive);
-      completeEl.hidden = false;
       completeElInfo.innerText = `${countdownTitle} finished on ${countdownDate}.`;
-      return;
+      completeEl.hidden = false;
+    } else {
+      // Else show Countdown in progress
+      //Populate Countdown
+      countdownElTitle.textContent = `${countdownTitle}`;
+      timeElements[0].textContent = `${days}`;
+      timeElements[1].textContent = `${hours}`;
+      timeElements[2].textContent = `${minutes}`;
+      timeElements[3].textContent = `${seconds}`;
+      // Show Countdown
+      completeEl.hidden = true;
+      countdownEl.hidden = false;
     }
-
-    //Populate Countdown
-    countdownElTitle.textContent = `${countdownTitle}`;
-    timeElements[0].textContent = `${days}`;
-    timeElements[1].textContent = `${hours}`;
-    timeElements[2].textContent = `${minutes}`;
-    timeElements[3].textContent = `${seconds}`;
-
-    //Show Countdown
-    countdownEl.hidden = false;
   }, second);
 };
 
