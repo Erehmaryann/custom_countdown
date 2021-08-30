@@ -28,6 +28,12 @@ const updateDOM = () => {
   // current moment in time
   const now = new Date().getTime(); //getTime returns it value in milliseconds
   const distance = countdownValue - now;
+
+  const days = Math.floor(distance / day);
+  const hours = Math.floor((distance % day) / hour);
+  const minutes = Math.floor((distance % hour) / minute);
+  const seconds = Math.floor((distance % minute) / second);
+  console.log(days, hours, minutes, seconds);
 };
 
 // Take Values from Form Input
