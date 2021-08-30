@@ -10,7 +10,10 @@ const timeElements = document.querySelectorAll("span");
 const countdownBtn = document.querySelector("#countdown-button");
 
 // Populate Countdown / Complete UI
-const updateDOM = () => {};
+const updateDOM = () => {
+  // current moment in time
+  const now = new Date().getTime();
+};
 
 // Global variable for the countdown date and title, countdown Value
 let countdownTitle = "";
@@ -28,7 +31,6 @@ const updateCountdown = (e) => {
   countdownDate = e.srcElement[1].value;
   //Get number version of current Date, and updateDOM and get time value from it.
   countdownValue = new Date(countdownDate).getTime();
-  console.log(countdownValue);
   updateDOM();
 };
 
