@@ -105,6 +105,24 @@ const reset = () => {
   countdownDate = "";
 };
 
+// Get data from local storage
+const getSavedCountdown = () => {
+  // Get data from local storage if it exists
+  const savedCountdown = localStorage.getItem("countdown");
+  // If there is data in local storage
+  if (savedCountdown) {
+    // hide the input container
+    inputContainer.hidden = true;
+    // Parse the data
+    const parsedCountdown = JSON.parse(savedCountdown);
+    // Set the values of the object
+    countdownTitle = parsedCountdown.title;
+    countdownDate = parsedCountdown.date;
+    countdownValue = new Date(countdownDate).getTime(); //Get number version of future Date, updateDOM and get time value from it.
+    updateDOM();
+  }
+};
+
 // Event listeners
 countdownForm.addEventListener("submit", updateCountdown);
 countdownBtn.addEventListener("click", reset);
