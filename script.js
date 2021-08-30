@@ -62,3 +62,4 @@ const updateCountdown = (e) => {
 
 // Event listeners
 countdownForm.addEventListener("submit", updateCountdown);
+countdownBtn.addEventListener("click", () => {});
