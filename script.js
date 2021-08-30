@@ -5,6 +5,7 @@ const countdownForm = document.querySelector("#countdownForm");
 const dateEl = document.querySelector("#date-picker");
 
 const countdownEl = document.querySelector("#countdown");
+const countdownElTitle = document.querySelector("#countdown-title");
 
 // Global variable for the countdown date and title, countdown Value
 let countdownTitle = "";
