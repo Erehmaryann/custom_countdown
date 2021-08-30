@@ -9,20 +9,21 @@ const countdownElTitle = document.querySelector("#countdown-title");
 const timeElements = document.querySelectorAll("span");
 const countdownBtn = document.querySelector("#countdown-button");
 
-// Populate Countdown / Complete UI
-const updateDOM = () => {
-  // current moment in time
-  const now = new Date().getTime();
-};
-
 // Global variable for the countdown date and title, countdown Value
 let countdownTitle = "";
 let countdownDate = "";
 let countdownValue = Date;
 
 // Set date Input Minimum with Today's Date
-const today = new Date().toISOString().split("T")[0];
+const today = new Date().toISOString().split("T")[0]; //split("T") returns an array of two items
 dateEl.setAttribute("min", today);
+
+// Populate Countdown / Complete UI
+const updateDOM = () => {
+  // current moment in time
+  const now = new Date().getTime();
+  const distance = countdownValue - now;
+};
 
 // Take Values from Form Input
 const updateCountdown = (e) => {
