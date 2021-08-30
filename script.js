@@ -14,6 +14,9 @@ let countdownTitle = "";
 let countdownDate = "";
 let countdownValue = Date;
 
+const second = 1000;
+const minute = second * 60;
+
 // Set date Input Minimum with Today's Date
 const today = new Date().toISOString().split("T")[0]; //split("T") returns an array of two items
 dateEl.setAttribute("min", today);
@@ -21,7 +24,7 @@ dateEl.setAttribute("min", today);
 // Populate Countdown / Complete UI
 const updateDOM = () => {
   // current moment in time
-  const now = new Date().getTime();
+  const now = new Date().getTime(); //getTime returns it value in milliseconds
   const distance = countdownValue - now;
 };
 
