@@ -72,6 +72,16 @@ const updateCountdown = (e) => {
   e.preventDefault();
   countdownTitle = e.srcElement[0].value;
   countdownDate = e.srcElement[1].value;
+  // set the values of object
+  savedCountdown = {
+    title: countdownTitle,
+    date: countdownDate,
+  };
+  // Save the values to local storage
+  localStorage.setItem("countdown", JSON.stringify(savedCountdown));
+  // Update the DOM
+  updateDOM();
+
   // Check for valid date
   if (countdownDate === "") {
     alert("Please select a date");
