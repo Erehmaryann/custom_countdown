@@ -103,6 +103,8 @@ const reset = () => {
   // Reset Countdown Values
   countdownTitle = "";
   countdownDate = "";
+  // Reset the values of the object in local storage
+  localStorage.removeItem("countdown");
 };
 
 // Get data from local storage
@@ -127,3 +129,6 @@ const getSavedCountdown = () => {
 countdownForm.addEventListener("submit", updateCountdown);
 countdownBtn.addEventListener("click", reset);
 completeElBtn.addEventListener("click", reset);
+
+//On load, Check localStorage
+getSavedCountdown();
