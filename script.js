@@ -16,7 +16,8 @@ dateEl.setAttribute("min", today);
 const updateCountdown = (e) => {
   e.preventDefault();
   countdownTitle = e.srcElement[0].value;
-  console.log(e);
+  countdownDate = e.srcElement[1].value;
+  console.log(e.srcElement[0].value);
 };
 
 // Event listeners
