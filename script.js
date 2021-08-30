@@ -16,6 +16,7 @@ let countdownValue = Date;
 
 const second = 1000;
 const minute = second * 60;
+const hour = minute * 60;
 
 // Set date Input Minimum with Today's Date
 const today = new Date().toISOString().split("T")[0]; //split("T") returns an array of two items
