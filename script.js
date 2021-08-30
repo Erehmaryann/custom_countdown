@@ -26,6 +26,8 @@ dateEl.setAttribute("min", today);
 
 // Populate Countdown / Complete UI
 const updateDOM = () => {
+  // Hide Input, show Countdown
+  // Start the countdown
   countdownActive = setInterval(() => {
     // current moment in time
     const now = new Date().getTime(); //getTime returns it value in milliseconds
@@ -60,6 +62,18 @@ const updateCountdown = (e) => {
   updateDOM();
 };
 
+// Reset All Values
+const reset = () => {
+  // Hide Countdowns, show Input
+  countdownEl.hidden = true;
+  inputContainer.hidden = false;
+  // stop the countdown
+  clearInterval(countdownActive);
+  // Reset Countdown Values
+  countdownTitle = "";
+  countdownDate = "";
+};
+
 // Event listeners
 countdownForm.addEventListener("submit", updateCountdown);
-countdownBtn.addEventListener("click", () => {});
+countdownBtn.addEventListener("click", reset);
