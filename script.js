@@ -13,6 +13,7 @@ const countdownBtn = document.querySelector("#countdown-button");
 let countdownTitle = "";
 let countdownDate = "";
 let countdownValue = Date;
+let countdownActive;
 
 const second = 1000;
 const minute = second * 60;
