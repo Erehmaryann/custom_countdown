@@ -36,6 +36,10 @@ const updateDOM = () => {
 
   //Populate Countdown
   countdownElTitle.textContent = `${countdownTitle}`;
+  timeElements[0].textContent = `${days}`;
+  timeElements[1].textContent = `${hours}`;
+  timeElements[2].textContent = `${minutes}`;
+  timeElements[3].textContent = `${seconds}`;
 
   //Hide Input
   inputContainer.hidden = true;
@@ -48,7 +52,7 @@ const updateCountdown = (e) => {
   e.preventDefault();
   countdownTitle = e.srcElement[0].value;
   countdownDate = e.srcElement[1].value;
-  //Get number version of current Date, and updateDOM and get time value from it.
+  //Get number version of future Date, updateDOM and get time value from it.
   countdownValue = new Date(countdownDate).getTime();
   updateDOM();
 };
