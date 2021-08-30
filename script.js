@@ -18,9 +18,9 @@ const updateCountdown = (e) => {
   e.preventDefault();
   countdownTitle = e.srcElement[0].value;
   countdownDate = e.srcElement[1].value;
-  console.log(e.srcElement[0].value);
-  //Get number version of current Date, and updateDom
+  //Get number version of current Date, and updateDom and get time value from it.
   countdownValue = new Date(countdownDate).getTime();
+  console.log(countdownValue);
 };
 
 // Event listeners
