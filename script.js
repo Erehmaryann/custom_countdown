@@ -42,6 +42,17 @@ const updateDOM = () => {
     const minutes = Math.floor((distance % hour) / minute);
     const seconds = Math.floor((distance % minute) / second);
 
+    //Hide Input
+    inputContainer.hidden = true;
+
+    // If the countdown is over, show Complete
+    if (distance < 0) {
+      clearInterval(countdownActive);
+      completeEl.hidden = false;
+      completeElInfo.innerText = `${countdownTitle} finished on ${countdownDate}.`;
+      return;
+    }
+
     //Populate Countdown
     countdownElTitle.textContent = `${countdownTitle}`;
     timeElements[0].textContent = `${days}`;
@@ -49,8 +60,6 @@ const updateDOM = () => {
     timeElements[2].textContent = `${minutes}`;
     timeElements[3].textContent = `${seconds}`;
 
-    //Hide Input
-    inputContainer.hidden = true;
     //Show Countdown
     countdownEl.hidden = false;
   }, second);
