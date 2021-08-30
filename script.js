@@ -34,6 +34,9 @@ const updateDOM = () => {
   const minutes = Math.floor((distance % hour) / minute);
   const seconds = Math.floor((distance % minute) / second);
   console.log(days, hours, minutes, seconds);
+
+  //Hide Input
+  inputContainer.hidden = true;
 };
 
 // Take Values from Form Input
