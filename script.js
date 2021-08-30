@@ -9,6 +9,8 @@ const countdownElTitle = document.querySelector("#countdown-title");
 const timeElements = document.querySelectorAll("span");
 const countdownBtn = document.querySelector("#countdown-button");
 
+const completeEl = document.querySelector("#complete");
+
 // Global variable for the countdown date and title, countdown Value
 let countdownTitle = "";
 let countdownDate = "";
