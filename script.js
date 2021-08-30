@@ -57,9 +57,14 @@ const updateCountdown = (e) => {
   e.preventDefault();
   countdownTitle = e.srcElement[0].value;
   countdownDate = e.srcElement[1].value;
-  //Get number version of future Date, updateDOM and get time value from it.
-  countdownValue = new Date(countdownDate).getTime();
-  updateDOM();
+  // Check for valid date
+  if (countdownDate === "") {
+    alert("Please select a date");
+  } else {
+    //Get number version of future Date, updateDOM and get time value from it.
+    countdownValue = new Date(countdownDate).getTime();
+    updateDOM();
+  }
 };
 
 // Reset All Values
