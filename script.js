@@ -47,7 +47,7 @@ const updateDOM = () => {
     inputContainer.hidden = true;
     //Show Countdown
     countdownEl.hidden = false;
-  });
+  }, second);
 };
 
 // Take Values from Form Input
