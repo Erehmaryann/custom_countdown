@@ -37,6 +37,8 @@ const updateDOM = () => {
 
   //Hide Input
   inputContainer.hidden = true;
+  //Show Countdown
+  countdownEl.hidden = false;
 };
 
 // Take Values from Form Input
