@@ -4,9 +4,10 @@ const inputContainer = document.querySelector("#input-container");
 const countdownForm = document.querySelector("#countdownForm");
 const dateEl = document.querySelector("#date-picker");
 
-// Global variable for the count down date and title
+// Global variable for the countdown date and title, countdown Value
 let countdownTitle = "";
 let countdownDate = "";
+let countdownValue = Date;
 
 // Set date Input Minimum with Today's Date
 const today = new Date().toISOString().split("T")[0];
