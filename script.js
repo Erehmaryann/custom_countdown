@@ -7,6 +7,7 @@ const dateEl = document.querySelector("#date-picker");
 const countdownEl = document.querySelector("#countdown");
 const countdownElTitle = document.querySelector("#countdown-title");
 const timeElements = document.querySelectorAll("span");
+const countdownBtn = document.querySelector("#countdown-button");
 
 // Global variable for the countdown date and title, countdown Value
 let countdownTitle = "";
