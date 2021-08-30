@@ -6,6 +6,7 @@ const dateEl = document.querySelector("#date-picker");
 
 // Global variable for the count down date and title
 let countdownTitle = "";
+let countdownDate = "";
 
 // Set date Input Minimum with Today's Date
 const today = new Date().toISOString().split("T")[0];
